@@ -12,7 +12,7 @@ DUDEPROGRAMER ?= usbasp
 #################
 
 CC = avr-gcc
-CFLAGS = -Os -DF_CPU=$(F_CPU)UL -mmcu=$(MCU) -Wall -std=gnu99
+CFLAGS += -Os -DF_CPU=$(F_CPU)UL -mmcu=$(MCU) -Wall -std=gnu99
 
 #################
 all: $(NAME) size
