@@ -26,7 +26,7 @@ $(NAME).hex: $(NAME)
 flash: $(NAME).hex
 	avrdude -V -c $(DUDEPROGRAMER) -p $(DUDEMCU) -P $(DUDEPORT) -U flash:w:$<
 
-readfuse: $(NAME).hex
+readfuse:
 	avrdude -V -c $(DUDEPROGRAMER) -p $(DUDEMCU) -P $(DUDEPORT) -U lfuse:r:-:h -U hfuse:r:-:h -U efuse:r:-:h
 
 size: $(NAME) $(NAME).lst
